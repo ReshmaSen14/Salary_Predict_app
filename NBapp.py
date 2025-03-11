@@ -7,8 +7,8 @@ import pandas as pd
 import joblib
 
 # Load the trained model and label encoders
-model = joblib.load(r"E:\ASSIGNMENT FILES -DS\4a) Naive Bayes\naivebayes_model.pkl")
-label_encoders = joblib.load(r"E:\ASSIGNMENT FILES -DS\4a) Naive Bayes\label_encoder.pkl")
+model = joblib.load("C:/Users/DELL/naivebayes_model.pkl")
+label_encoders = joblib.load("C:/Users/DELL/label_encoder.pkl")
 
 # Define the input fields
 st.title("Salary Prediction App")
@@ -52,3 +52,12 @@ if st.button("Predict Salary"):
     prediction = model.predict(user_df)
     salary_label = ">50K" if prediction[0] == 1 else "<=50K"
     st.success(f"Predicted Salary: {salary_label}")
+
+
+
+
+
+
+
+
+
